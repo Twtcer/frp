@@ -29,8 +29,11 @@ packages/
 release/
 test/bin/
 vendor/
+lastversion/
 dist/
 .idea/
+.vscode/
+.autogen_ssh_key
 
 # Cache
 *.swp

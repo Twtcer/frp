@@ -15,7 +15,7 @@ rm -rf ./release/packages
 mkdir -p ./release/packages
 
 os_all='linux windows darwin freebsd'
-arch_all='386 amd64 arm arm64 mips64 mips64le mips mipsle'
+arch_all='386 amd64 arm arm64 mips64 mips64le mips mipsle riscv64'
 
 cd ./release
 
@@ -46,7 +46,8 @@ for os in $os_all; do
             mv ./frps_${os}_${arch} ${frp_path}/frps
         fi  
         cp ../LICENSE ${frp_path}
-        cp -rf ../conf/* ${frp_path}
+        cp -f ../conf/frpc.toml ${frp_path}
+        cp -f ../conf/frps.toml ${frp_path}
 
         # packages
         cd ./packages
